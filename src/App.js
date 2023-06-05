@@ -1,7 +1,16 @@
+import Task from "./Components/Task";
+import TaskForm from "./Components/TaskForm";
+import './App.css';
+
 function App() {
   return (
-    <div className="App">
-    </div>
+    <main className="todo-main">
+      <TaskForm />
+      <Task />
+      <Task />
+      <Task />
+      <Task />
+    </main>
   );
 }
 

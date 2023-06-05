@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.15rem;
+}
+
+body {
+  background: linear-gradient(to right, #17062b, #202020);
+  color: #aaa;
+}
+
+main {
+  max-width: 25rem;
+  margin: 2rem auto;
+}
+
+form {
+  border: 3px solid #30313d;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+}
+
+form input[type='text'] {
+  background: none;
+  border: 0;
+  padding: 0 8px;
+  display: block;
+  width: 100%;
+}
+
+form button {
+  background-color: #61dafb;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-item {
+  background-color: #30313d;
+  border-radius: 10px;
+  padding: 5px 9px;
+  margin-top: 5px;
+  display: flex;
+}
+
+.task-item svg {
+  height: 1.18rem;
+  margin-right: 4px;
+}
