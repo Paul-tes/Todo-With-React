@@ -3,9 +3,9 @@ import CheckBox from "./CheckBox";
 
 const Task = ({name, done, onToggle}) => {
   return (
-    <div className="task-item">
+    <div className={'task-item ' + (done ? 'done' : '')}>
       <CheckBox status={done} onClick={() => onToggle(!done)} />
-      {name}
+      <span>{name}</span>
     </div>
   )
 }

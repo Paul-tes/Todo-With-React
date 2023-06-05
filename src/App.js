@@ -29,8 +29,12 @@ function App() {
     })
   }
 
+  const noCompletes = tasks.filter((task) => task.done).length;
+  const noTasks = tasks.length;
+
   return (
     <main className="todo-main">
+      <h1>{noCompletes}/{noTasks} Complete</h1>
       <TaskForm addTask={addTask}/>
       {tasks.map((task, index) => (
         <Task {...task} onToggle={done => updateTaskDone(index, done)} />

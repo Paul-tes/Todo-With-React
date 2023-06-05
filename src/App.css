@@ -14,6 +14,12 @@ main {
   margin: 2rem auto;
 }
 
+main h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 form {
   border: 3px solid #30313d;
   border-radius: 10px;
@@ -45,8 +51,32 @@ form button {
   display: flex;
 }
 
+div.done {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
 .task-item svg {
   height: 1.18rem;
   margin-right: 4px;
   fill: #7dc0ff;
+}
+
+.task-item span {
+  position: relative;
+}
+
+.task-item span::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #ddd;
+  position: absolute;
+  top: 12px;
+  transition: width 0.3s linear;
+}
+
+div.done span::before {
+  width: 100%;
 }
