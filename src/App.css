@@ -5,8 +5,8 @@
 }
 
 body {
-  background: linear-gradient(to right, #17062b, #202020);
-  color: #aaa;
+  background: linear-gradient(to right, #180231, #292929);
+  color: #ddd;
 }
 
 main {
@@ -27,10 +27,11 @@ form input[type='text'] {
   padding: 0 8px;
   display: block;
   width: 100%;
+  color: #fff;
 }
 
 form button {
-  background-color: #61dafb;
+  background-color: #58aeff;
   border: 0;
   border-radius: 4px;
   cursor: pointer;
@@ -47,4 +48,5 @@ form button {
 .task-item svg {
   height: 1.18rem;
   margin-right: 4px;
+  fill: #7dc0ff;
 }
