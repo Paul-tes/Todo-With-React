@@ -23,6 +23,12 @@ function App() {
     })
   }
 
+  const addTask = (name) => {
+    setTasks(prev => {
+      return [...prev, {name: name, done: false}];
+    })
+  }
+
   const noCompletes = tasks.filter((task) => task.done).length;
   const noTasks = tasks.length;
 
