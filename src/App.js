@@ -46,13 +46,24 @@ function App() {
     })
   }
 
+  const renameTask = (index, newName) => {
+    setTasks((prev) => {
+      const newTasks = [...prev];
+      newTasks[index].name = newName;
+      return newTasks;
+    })
+  }
+
   return (
     <main className="todo-main">
       <h1>{noCompletes}/{noTasks} Complete</h1>
       <h2>{mesStatus()}</h2>
       <TaskForm addTask={addTask}/>
       {tasks.map((task, index) => (
-        <Task {...task} onToggle={done => updateTaskDone(index, done)} onTrash={() => removeTask(index)}/>
+        <Task {...task} onToggle={done => updateTaskDone(index, done)}
+                        onTrash={() => removeTask(index)} 
+                        onRename={(newName) => renameTask(index, newName)}
+        />
       ))}
     </main>
   );

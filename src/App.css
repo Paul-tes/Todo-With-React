@@ -74,7 +74,8 @@ div.check-box {
   justify-content: center;
 }
 
-.task-name {
+.task-name,
+.task-item form {
   flex-grow: 1;
 }
 
@@ -106,4 +107,10 @@ button.trash {
 
 button.trash svg {
   fill: #aaa;
+}
+
+.task-item form input {
+  border: 2px solid #777;
+  border-radius: 5px;
+  padding: 2px 4px;
 }
