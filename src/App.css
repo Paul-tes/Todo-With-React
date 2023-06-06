@@ -17,7 +17,13 @@ main {
 main h1 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.7rem;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 form {
@@ -49,6 +55,7 @@ form button {
   padding: 5px 9px;
   margin-top: 5px;
   display: flex;
+  align-items: center;
 }
 
 div.done {
@@ -60,6 +67,15 @@ div.done {
   height: 1.18rem;
   margin-right: 4px;
   fill: #7dc0ff;
+}
+
+div.check-box {
+  display: flex;
+  justify-content: center;
+}
+
+.task-name {
+  flex-grow: 1;
 }
 
 .task-item span {
@@ -79,4 +95,15 @@ div.done {
 
 div.done span::before {
   width: 100%;
+}
+
+button.trash {
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+
+button.trash svg {
+  fill: #aaa;
 }

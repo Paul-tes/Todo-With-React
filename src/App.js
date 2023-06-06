@@ -32,12 +32,27 @@ function App() {
   const noCompletes = tasks.filter((task) => task.done).length;
   const noTasks = tasks.length;
 
+  const mesStatus = () => {
+    const pc = (noCompletes / noTasks) * 100;
+    if (pc === 0) return 'Try to do at least one! 🙏';
+    if (pc === 100) return 'Nice job for today! 👌';
+    return 'keep it going 💪';
+
+  }
+
+  const removeTask = (index) => {
+    setTasks((prev) => {
+      return prev.filter((task, i) => i !== index)
+    })
+  }
+
   return (
     <main className="todo-main">
       <h1>{noCompletes}/{noTasks} Complete</h1>
+      <h2>{mesStatus()}</h2>
       <TaskForm addTask={addTask}/>
       {tasks.map((task, index) => (
-        <Task {...task} onToggle={done => updateTaskDone(index, done)} />
+        <Task {...task} onToggle={done => updateTaskDone(index, done)} onTrash={() => removeTask(index)}/>
       ))}
     </main>
   );
