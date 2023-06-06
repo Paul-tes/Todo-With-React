@@ -15,17 +15,17 @@ function App() {
     setTasks(JSON.parse(localStorage.getItem('tasks')))
   }, [])
 
+  const addTask = (name) => {
+    setTasks(prev => {
+      return [...prev, {name: name, done: false}];
+    })
+  }
+
   const updateTaskDone = (index, status) => {
     setTasks(prev => {
       const newTasks = [...prev];
       newTasks[index].done = status;
       return newTasks;
-    })
-  }
-
-  const addTask = (name) => {
-    setTasks(prev => {
-      return [...prev, {name: name, done: false}];
     })
   }
 
